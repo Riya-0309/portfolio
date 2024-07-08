@@ -24,6 +24,8 @@ export default function ProjectCard(props) {
   const [loadedprojectimg, setloadedprojectimg] = useState(false);
   const textColor = useColorModeValue("navy.700", "lightpeach.100");
   const styles = useStyleConfig("Card");
+
+  console.log("first");
   return (
     <Box
       __css={styles}
