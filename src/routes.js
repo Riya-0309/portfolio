@@ -31,9 +31,9 @@ const routes = [
     component: About
   },
   {
-    name: "Projects And Blogs",
+    name: "Projects",
     path: "/projects",
-    navbarDisplayName: "<Projects And Blogs/>",
+    navbarDisplayName: "<Projects />",
     icon: <Icon as={MdCode} width="30px" height="30px" color="inherit" />,
     component: Projects
   },

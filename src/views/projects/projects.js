@@ -4,18 +4,19 @@ import {
   SimpleGrid,
   Flex,
   Text,
-  useColorModeValue
+  useColorModeValue,
 } from "@chakra-ui/react";
 import routes from "../../routes";
 import Navbar from "../../components/Navbar/Navbar";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
-import nftproject from "../../assets/projects/nft_blockchain_500x300.jpg";
-import medhub from "../../assets/projects/medhub_500x300.jpg";
-import collab from "../../assets/projects/lets_collab_img3.jpg";
-import blog from "../../assets/projects/bloggers.jpg";
+import wp1 from "../../assets/wp1.jpeg";
+import wp2 from "../../assets/wp2.jpeg";
+import wp3 from "../../assets/wp3.jpeg";
 import eeg from "../../assets/projects/eeg_500x300.jpg";
 import mtrans from "../../assets/projects/mt_500x300.jpg";
 import steg from "../../assets/projects/steg_500x300.jpeg";
+import sampleVideo from "../../assets/video1.mp4";
+import sampleVideo2 from "../../assets/video3.mp4";
 
 export default function Projects() {
   const textColorPrimary = useColorModeValue(
@@ -46,69 +47,44 @@ export default function Projects() {
           mb="40px"
         ></Flex>
         <SimpleGrid
-          columns={{ base: 1, md: 3 }}
+          columns={{ base: 1, sm: 2, md: 3 }}
           gap="25px"
           alignItems="center"
           justifyContent="center"
         >
           <ProjectCard
-            projectImage={nftproject}
-            projectName={"NFT Based E-Commerce Website"}
-            aboutProject={"Blockchain based warranty using NFT"}
-            techStack={"EXPRESS JS, NODE JS, REACT JS, MONGODB, SOLIDITY"}
-            projectLiveLink="https://flipkart-grid-frontend.vercel.app/"
-            projectLink="https://github.com/Rahul1582/NFT-Based-E-Commerce-Website"
-          />
-          <ProjectCard
-            projectImage={collab}
-            projectName={"LET'S COLLAB"}
-            aboutProject={"A Realtime Chatting Application"}
-            techStack={"EXPRESS JS, NODE JS, REACT JS, MONGODB"}
-            projectLiveLink="https://lets-collab.vercel.app/"
-            projectLink="https://github.com/Rahul1582/Lets_Collab"
-          />
-          <ProjectCard
-            projectImage={medhub}
-            projectName={"MedHub-360"}
+            videoSrc={sampleVideo}
+            projectName={"Ganesh Chaturthi"}
             aboutProject={
-              "An Advanced Medical-Healthcare Application To Analyse Medical Reports For Patients And Doctors"
+              "A video of the grand celebration of an Indian festival"
             }
-            techStack={
-              "JAVASCRIPT, PYTHON, NODE JS, MONGODB, HTML, BOOTSTRAP, CSS,TESSERACT-OCR, FLASK"
-            }
-            projectLiveLink="https://medhub-360.vercel.app/"
-            projectLink="https://github.com/Rahul1582/MedHub_360"
           />
           <ProjectCard
-            projectImage={blog}
-            projectName={"Bloggers Arena"}
-            aboutProject={"A Blogging Website with User Authentication"}
-            techStack={"EXPRESS JS, NODE JS, REACT JS, MONGODB"}
-            projectLiveLink="https://bloggers-arena.vercel.app/"
-            projectLink="https://github.com/Rahul1582/Bloggers-Arena"
+            videoSrc={sampleVideo2}
+            projectName={"Rainy Season"}
+            aboutProject={"The beauty of the earth when it's raining"}
           />
           <ProjectCard
-            projectImage={eeg}
-            projectName={"Emotion Recognition from Psychological Signals"}
+            projectImage={wp3}
+            projectName={"Cafe Advertising"}
+            aboutProject={"A poster for the newly opened cafe"}
+          />
+          <ProjectCard
+            projectImage={wp1}
+            projectName={"Freestyle photography"}
             aboutProject={
-              "Detection of Human Emotions from EEG signals using the AMIGOS Dataset"
+              "An old, rusty barge rests on the dry shore, embodying the passage of time."
             }
-            techStack={
-              "PYTORCH, CNN, SVC, PYTHON, FOURIER AND WAVELET TRANSFORMATIONS, STFT, ENTROPY, FEATURE FUSION"
-            }
-            projectLink="https://github.com/Rahul1582/Emotion-Recognition-from-Psychological-Signals"
           />
           <ProjectCard
-            projectImage={mtrans}
-            projectName={"Machine Translation"}
+            projectImage={wp2}
+            projectName={"Banner of College Festival"}
             aboutProject={
-              "Translated Texts With The Help Of Encoder- Decoder LSTM Model And Attention Mechanism"
+              "Representation of the whole cultural fest into a single picture"
             }
-            techStack={"LSTM, ENCODER-DECODER, ATTENTION MECHANISM"}
-            projectLink="https://github.com/Rahul1582/Bloggers-Arena"
           />
         </SimpleGrid>
-        <Flex
+        {/* <Flex
           direction="row"
           justifyContent="center"
           alignItems="Center"
@@ -137,7 +113,7 @@ export default function Projects() {
             aboutProject={"This Blog is about hiding an Image inside an Image"}
             projectLink="https://rahul1582.medium.com/steganography-part-2-ad7452a3ff1"
           />
-        </SimpleGrid>
+        </SimpleGrid> */}
       </Box>
     </Box>
   );
