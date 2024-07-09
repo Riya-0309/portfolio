@@ -20,8 +20,8 @@ export default function Dashboard() {
   const [quote, setQuote] = useState("");
   const [loadedDashboardimg, setloadedDashboardimg] = useState(false);
   const styles = useStyleConfig("Card");
-  let highlightTextColor = useColorModeValue("lightblue.100", "lightpeach.100");
-  let textColor = useColorModeValue("gray.700", "white");
+  let highlightTextColor = "beige.600";
+  let textColor = "navy.900"
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -81,7 +81,7 @@ export default function Dashboard() {
                     fontWeight="bold"
                     color={textColor}
                   >
-                    Hello Everyone!! 🙋🏻‍♂️
+                    Hello Everyone!! 🙋‍♀️
                   </Text>
 
                   <Text
@@ -92,7 +92,7 @@ export default function Dashboard() {
                   >
                     This is{" "}
                     <Text display="inline-flex" color={highlightTextColor}>
-                      Rahul Kumar Patro
+                     Riya Chapatwala
                     </Text>
                   </Text>
                   <Text
@@ -103,7 +103,7 @@ export default function Dashboard() {
                   >
                     I am a{" "}
                     <Text display="inline-flex" color={highlightTextColor}>
-                      Software Developer
+                      Marketing Assistant and a Software Developer
                     </Text>
                   </Text>
                 </Box>
@@ -131,32 +131,6 @@ export default function Dashboard() {
           </Grid>
         </Flex>
 
-        <Flex direction="column" justifyContent="center" alignItems="center">
-          <Box
-            __css={styles}
-            border="none"
-            textAlign="center"
-            cursor="default"
-            mt="20px"
-          >
-            Random Quote
-            <Box
-              fontSize={{ sm: "1em", md: "1.3em", xl: "1.3em" }}
-              color={highlightTextColor}
-              cursor="default"
-            >
-              {quote ? (
-                <Typewriter
-                  onInit={(typewriter) => {
-                    typewriter.typeString(quote).start();
-                  }}
-                />
-              ) : (
-                <span>|</span>
-              )}
-            </Box>
-          </Box>
-        </Flex>
       </Box>
     </Box>
   );

@@ -7,42 +7,37 @@ import {
   useStyleConfig,
   Text,
   useColorModeValue,
-  useColorMode,
   Icon,
-  Button,
-  Link,
-  Skeleton
+  Skeleton,
 } from "@chakra-ui/react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { MdFlightTakeoff } from "react-icons/md";
-import { LiaDrumSolid } from "react-icons/lia";
-import { GiCricketBat } from "react-icons/gi";
+import { GiPaintBrush  } from "react-icons/gi";
+import { GiMusicalNotes } from "react-icons/gi";
 import Navbar from "../../components/Navbar/Navbar";
 import routes from "../../routes";
 import TechStackCard from "../../components/techStackCard/techStackCard";
 import AboutMeInfo from "../../components/aboutMeInfo/aboutMeInfo";
-import angular from "../../assets/icons/angular.svg";
-import typescript from "../../assets/icons/typescript.svg";
-import node from "../../assets/icons/nodejs.svg";
-import mongo from "../../assets/icons/mongodb.svg";
+import trelloSvg from "../../assets/icons/trelloSvg.svg";
+import tikTok from "../../assets/icons/tikTok.svg";
+import adobe from "../../assets/icons/adobe.svg";
+import figma from "../../assets/icons/figma.svg";
+import illustrate from "../../assets/icons/illustrate.svg";
+import vn from "../../assets/icons/vn.jpg";
+import imovie from "../../assets/icons/imovie.jpg";
 import js from "../../assets/icons/javascript.svg";
 import react from "../../assets/icons/react.svg";
 import html from "../../assets/icons/html.svg";
 import css from "../../assets/icons/css3.svg";
 import git from "../../assets/icons/git.svg";
-import gitlab from "../../assets/icons/gitlab.svg";
-import cpp from "../../assets/icons/c++.png";
-import express from "../../assets/icons/express.svg";
 import myphoto from "../../assets/aboutMePhoto.jpg";
-import GitHubCalendar from "react-github-calendar";
 
 export default function About() {
   const [loadedProfileimg, setloadedProfileimg] = useState(false);
   const [loadedgithubimg, setloadedgithubimg] = useState(false);
   const styles = useStyleConfig("Card");
-  const { colorMode } = useColorMode();
-  const textColorPrimary = useColorModeValue("lightblue.100", "lightpeach.100");
+  const textColorPrimary = useColorModeValue("lightblue.100", "beige.600");
   const cardShadow = useColorModeValue(
     "0px 18px 40px rgba(112, 144, 176, 0.12)",
     "unset"
@@ -78,10 +73,10 @@ export default function About() {
           <Grid
             templateColumns={{
               base: "1fr",
-              lg: "1.34fr 1.62fr"
+              lg: "1.34fr 1.62fr",
             }}
             templateRows={{
-              lg: "1fr"
+              lg: "1fr",
             }}
             gap={{ base: "20px", xl: "20px" }}
           >
@@ -138,33 +133,34 @@ export default function About() {
                 <SimpleGrid columns="2" gap="20px">
                   <AboutMeInfo
                     boxShadow={cardShadow}
-                    title="Current Organization"
-                    value="Truminds Software Systems"
-                  />
-                  <AboutMeInfo
-                    boxShadow={cardShadow}
-                    title="Designation"
-                    value="Software Development Engineer - 1"
-                  />
-                  <AboutMeInfo
-                    boxShadow={cardShadow}
-                    title="Location"
-                    value="Bengaluru, Karnataka"
-                  />
-                  <AboutMeInfo
-                    boxShadow={cardShadow}
-                    title="Education"
-                    value="BIT Mesra, Ranchi"
+                    title="Current Education"
+                    value="California State University - Long Beach"
                   />
                   <AboutMeInfo
                     boxShadow={cardShadow}
                     title="Degree"
-                    value="Masters"
+                    value="Masters in Computer Science"
                   />
                   <AboutMeInfo
                     boxShadow={cardShadow}
+                    title="Experience (1)"
+                    value="Managerial Assistant - Taste Of Bhagwati"
+                  />
+                  <AboutMeInfo
+                    boxShadow={cardShadow}
+                    title="Experience (2)"
+                    value="Marketing Assistant - WebOsmotic Pvt. Ltd."
+                  />
+                  <AboutMeInfo
+                    boxShadow={cardShadow}
+                    title="Experience (3)"
+                    value="Software Developer - WebOsmotic Pvt. Ltd."
+                  />
+
+                  <AboutMeInfo
+                    boxShadow={cardShadow}
                     title="Languages"
-                    value="English, Hindi, Odia"
+                    value="English, Hindi, Gujarati"
                   />
                 </SimpleGrid>
               </Box>
@@ -189,64 +185,19 @@ export default function About() {
           align={{ base: "center", xl: "center" }}
           justify={{ base: "center", xl: "center" }}
         >
-          <TechStackCard imagepath={angular} />
-          <TechStackCard imagepath={react} />
-          <TechStackCard imagepath={js} />
-          <TechStackCard imagepath={typescript} />
-          <TechStackCard imagepath={cpp} />
-          <TechStackCard imagepath={node} />
-          <TechStackCard imagepath={mongo} />
-          <TechStackCard imagepath={express} background="white" />
+          <TechStackCard imagepath={adobe} />
+          <TechStackCard imagepath={illustrate} />
+          <TechStackCard imagepath={vn} />
+          <TechStackCard imagepath={imovie} />
+          <TechStackCard imagepath={figma} />
+          <TechStackCard imagepath={trelloSvg} />
           <TechStackCard imagepath={git} />
-          <TechStackCard imagepath={gitlab} />
+          <TechStackCard imagepath={tikTok} />
           <TechStackCard imagepath={html} />
           <TechStackCard imagepath={css} />
+          <TechStackCard imagepath={js} />
+          <TechStackCard imagepath={react} />
         </SimpleGrid>
-
-        <Flex
-          direction="row"
-          justifyContent="center"
-          alignItems="center"
-          mb="40px"
-          mt="40px"
-        >
-          <Text color={textColorPrimary} fontSize="2em" textAlign="center">
-            {"<MY GITHUB CONTRIBUTIONS/>"}
-          </Text>
-        </Flex>
-        <Box display="flex" justifyContent="center" alignItems="center">
-          <GitHubCalendar
-            username="rahul1582"
-            colorScheme={colorMode === "light" ? "light" : "dark"}
-            year="last"
-          />
-        </Box>
-        <Flex justifyContent="center" alignItems="center" mt="20px">
-          <Skeleton
-            height="100%"
-            isLoaded={loadedgithubimg}
-            color="white"
-            fadeDuration={1}
-          >
-            <LazyLoadImage
-              src={
-                colorMode === "light"
-                  ? "https://github-readme-streak-stats.herokuapp.com?user=Rahul1582&theme=whatsapp-light&hide_border=true&border_radius=5.8&date_format=j%20M%5B%20Y%5D"
-                  : "https://github-readme-streak-stats.herokuapp.com?user=Rahul1582&theme=calm-pink&hide_border=true&border_radius=5.8&date_format=j%20M%5B%20Y%5D"
-              }
-              alt="GitHub Streak"
-              effect="blur"
-              onLoad={() => setloadedgithubimg(true)}
-            />
-          </Skeleton>
-        </Flex>
-        <Flex justifyContent="center" alignItems="center" mt="20px">
-          <Link href="https://github.com/Rahul1582" target="blank">
-            <Button variant="darkBrand" fontSize="sm" fontFamily="DM Sans">
-              Visit Github
-            </Button>
-          </Link>
-        </Flex>
         <Flex
           direction="row"
           justifyContent="center"
@@ -268,60 +219,64 @@ export default function About() {
           <Box __css={styles}>
             <Box textAlign="center">
               <Icon
+                as={GiPaintBrush}
+                width="30px"
+                height="30px"
+                color="navy.900"
+              />
+            </Box>
+            <Text textAlign="center" color={"navy.900"}>
+              Painting
+            </Text>
+            <Text color={textColorPrimary} textAlign="center" mt="5px">
+              I have a deep admiration for art and am an amateur mandala artist
+              myself. I began creating mandalas at the age of 18, and over time,
+              my interest grew as I learned from various sources. This art form
+              has significantly improved my focus, determination, and patience,
+              positively impacting both my personal and professional growth.
+              Engaging in mandala art has also enhanced my creativity.
+            </Text>
+          </Box>
+          <Box __css={styles}>
+            <Box textAlign="center">
+              <Icon
                 as={MdFlightTakeoff}
                 width="30px"
                 height="30px"
-                color="inherit"
+                color="navy.900"
               />
             </Box>
-            <Text textAlign="center">Travelling & Exploring</Text>
+            <Text textAlign="center" color={"navy.900"}>
+              Travelling
+            </Text>
             <Text color={textColorPrimary} textAlign="center" mt="5px">
               I am passionate about traveling and exploring new places. Whether
-              it's uncovering hidden gems in my own backyard or embarking on
-              exciting adventures, I thrive on the thrill of discovering new
-              cultures, cuisines, and landscapes. Traveling not only broadens my
-              horizons but also provides me with valuable life experiences and a
-              deep appreciation for the diversity of our world!!
+              it's uncovering hidden gems or embarking on exciting adventures, I
+              thrive on the thrill of discovering new cultures, cuisines, and
+              landscapes. Traveling not only broadens my horizons but also
+              provides me with valuable life experiences and a deep appreciation
+              for the diversity of our world!!
             </Text>
           </Box>
           <Box __css={styles}>
             <Box textAlign="center">
               <Icon
-                as={LiaDrumSolid}
+                as={GiMusicalNotes}
                 width="30px"
                 height="30px"
-                color="inherit"
+                color="navy.900"
               />
             </Box>
-            <Text textAlign="center">Playing Drums</Text>
-            <Text color={textColorPrimary} textAlign="center" mt="5px">
-              I have a deep passion for playing the drums, which has been a
-              cherished hobby of mine for many years. The rhythmic beats and the
-              feeling of being in sync with the music provide me with a sense of
-              joy and creative expression that is truly unparalleled. Whether
-              it's jamming with friends, exploring new techniques, or simply
-              drumming to my favorite tunes, I find immense fulfillment and
-              relaxation in this musical pursuit!!
+            <Text textAlign="center" color={"navy.900"}>
+              Singing
             </Text>
-          </Box>
-          <Box __css={styles}>
-            <Box textAlign="center">
-              <Icon
-                as={GiCricketBat}
-                width="30px"
-                height="30px"
-                color="inherit"
-              />
-            </Box>
-            <Text textAlign="center">Playing Outdoor Games</Text>
             <Text color={textColorPrimary} textAlign="center" mt="5px">
-              Whether it's a competitive game of soccer, a relaxing round of
-              golf, or simply throwing a frisbee in the park, I find immense joy
-              and fulfillment in the great outdoors. Playing sports not only
-              keeps me physically active but also fosters teamwork, leadership,
-              and a strong sense of camaraderie. It's a wonderful way for me to
-              unwind, stay fit, and connect with friends and family while
-              enjoying the beauty of nature!!
+              I have a deep admiration for music and sometimes I sing, too.
+              Singing has improved my breathing techniques, reduced stress, and
+              increased my confidence. It has provided a sense of emotional
+              release and connected me with a community of fellow music
+              enthusiasts. Overall, singing has enriched my life in numerous
+              ways, fostering both mental and physical well-being.
             </Text>
           </Box>
         </SimpleGrid>

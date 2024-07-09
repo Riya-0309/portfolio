@@ -3,14 +3,12 @@ import { Box, useColorModeValue, useStyleConfig, Text } from "@chakra-ui/react";
 
 export default function AboutMeInfo(props) {
   const { title, value } = props;
-  const textColorPrimary = useColorModeValue("lightblue.100", "lightpeach.100");
-  const textColorSecondary = useColorModeValue("secondaryGray.900", "white");
-  const bg = useColorModeValue("secondaryGray.400", "navyBlue.300");
+  const textColorPrimary = useColorModeValue("lightblue.100", "beige.600");
+  const textColorSecondary = useColorModeValue("secondaryGray.900", "navy.900");
   const styles = useStyleConfig("Card");
   return (
     <Box
       __css={styles}
-      bg={bg}
       paddingLeft="5px"
       paddingRight="5px"
       border="none"

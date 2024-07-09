@@ -79,34 +79,6 @@ export default function Sidenav(props) {
               <Content routes={routes} />
             </Box>
           </Stack>
-          <Flex
-            align="center"
-            direction="row"
-            fontSize="20px"
-            gap="20px"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <GitHubButton
-              href="https://github.com/Rahul1582/portfolio-rahulkp"
-              data-color-scheme="no-preference: light; light: light; dark: dark_dimmed;"
-              data-icon="octicon-star"
-              data-size="large"
-              aria-label="Star Rahul1582/portfolio-rahulkp on GitHub"
-            >
-              Star
-            </GitHubButton>
-
-            <GitHubButton
-              href="https://github.com/Rahul1582/portfolio-rahulkp/fork"
-              data-color-scheme="no-preference: light; light: light; dark: dark_dimmed;"
-              data-icon="octicon-repo-forked"
-              data-size="large"
-              aria-label="Fork Rahul1582/portfolio-rahulkp on GitHub"
-            >
-              Fork
-            </GitHubButton>
-          </Flex>
         </Flex>
       </Box>
     </Box>
@@ -115,7 +87,7 @@ export default function Sidenav(props) {
 
 export function SideNavResponsive(props) {
   const { colorMode } = useColorMode();
-  let sidenavBg = useColorModeValue("white", "navyBlue.300");
+  let sidenavBg = useColorModeValue("white", "beige.200");
   let navbarBorderColor = useColorModeValue("lightblue.100", "lightpeach.100");
   let variantChange = "0.2s linear";
   let shadow = useColorModeValue(
@@ -200,34 +172,6 @@ export function SideNavResponsive(props) {
                     <Content routes={routes} />
                   </Box>
                 </Stack>
-                <Flex
-                  align="center"
-                  direction="row"
-                  fontSize="20px"
-                  gap="20px"
-                  justifyContent="center"
-                  alignItems="center"
-                >
-                  <GitHubButton
-                    href="https://github.com/Rahul1582/portfolio-rahulkp"
-                    data-color-scheme="no-preference: light; light: light; dark: dark_dimmed;"
-                    data-icon="octicon-star"
-                    data-size="large"
-                    aria-label="Star Rahul1582/portfolio-rahulkp on GitHub"
-                  >
-                    Star
-                  </GitHubButton>
-
-                  <GitHubButton
-                    href="https://github.com/Rahul1582/portfolio-rahulkp/fork"
-                    data-color-scheme="no-preference: light; light: light; dark: dark_dimmed;"
-                    data-icon="octicon-repo-forked"
-                    data-size="large"
-                    aria-label="Fork Rahul1582/portfolio-rahulkp on GitHub"
-                  >
-                    Fork
-                  </GitHubButton>
-                </Flex>
               </Flex>
             </Box>
           </DrawerBody>

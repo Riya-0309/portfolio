@@ -5,9 +5,9 @@ import { NavLink, useLocation } from "react-router-dom";
 export default function Content(props) {
   const { routes } = props;
   let currentlocation = useLocation();
-  let activeColor = useColorModeValue("gray.700", "white");
+  let activeColor = useColorModeValue("gray.700", "beige.600");
 
-  let activeIcon = useColorModeValue("gray.700", "white");
+  let activeIcon = useColorModeValue("gray.700", "beige.600");
   let textColor = useColorModeValue("lightblue.100", "lightpeach.100");
 
   const activeRoute = (routeName) => {
@@ -23,6 +23,9 @@ export default function Content(props) {
             py="14px"
             border={
               activeRoute(route.path.toLowerCase()) ? "3px solid" : "none"
+            }
+            borderColor={
+              activeRoute(route.path.toLowerCase()) ? "beige.600" : "none"
             }
           >
             <Flex

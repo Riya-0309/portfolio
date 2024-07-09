@@ -34,6 +34,14 @@ export const globalStyles = {
       300: "#272445",
       400: "#1F1D36"
     },
+    beige: {
+      100: "#faf0e6",
+      200: "#fff0db",
+      300: "#eed9c4",
+      400: "#e4d5b7",
+      500: "#d9b99b",
+      600: "#8B4513"
+    },
     lightpeach: {
       100: "#E9A6A6"
     },
@@ -48,7 +56,7 @@ export const globalStyles = {
     global: (props) => ({
       body: {
         overflowX: "hidden",
-        bg: mode("secondaryGray.300", "navyBlue.400")(props),
+        bg: mode("secondaryGray.300", "beige.200")(props),
         fontFamily: "Lilita One",
         fontWeight: "200"
       },
