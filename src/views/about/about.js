@@ -31,7 +31,7 @@ import react from "../../assets/icons/react.svg";
 import html from "../../assets/icons/html.svg";
 import css from "../../assets/icons/css3.svg";
 import git from "../../assets/icons/git.svg";
-import myphoto from "../../assets/aboutMePhoto.jpg";
+import myphoto from "../../assets/Riya.jpeg";
 
 export default function About() {
   const [loadedProfileimg, setloadedProfileimg] = useState(false);
