@@ -103,7 +103,7 @@ export default function Dashboard() {
                   >
                     I am a{" "}
                     <Text display="inline-flex" color={highlightTextColor}>
-                      Marketing Assistant and a Software Developer
+                      Marketing Specialist and a Software Developer
                     </Text>
                   </Text>
                 </Box>

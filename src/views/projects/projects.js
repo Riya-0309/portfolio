@@ -12,9 +12,7 @@ import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import wp1 from "../../assets/wp1.jpeg";
 import wp2 from "../../assets/wp2.jpeg";
 import wp3 from "../../assets/wp3.jpeg";
-import eeg from "../../assets/projects/eeg_500x300.jpg";
-import mtrans from "../../assets/projects/mt_500x300.jpg";
-import steg from "../../assets/projects/steg_500x300.jpeg";
+import paid from "../../assets/paid1.png";
 import sampleVideo from "../../assets/video1.mp4";
 import sampleVideo2 from "../../assets/video3.mp4";
 
@@ -82,6 +80,12 @@ export default function Projects() {
             aboutProject={
               "Representation of the whole cultural fest into a single picture"
             }
+          />
+          <ProjectCard
+            projectImage={paid}
+            projectName={"PAID Inc."}
+            aboutProject={"The application to make the payments, cart, and shipping services on a single platform"}
+            techStack={"HTML, CSS, React JS, Material UI, Framer Motion"}
           />
         </SimpleGrid>
         {/* <Flex

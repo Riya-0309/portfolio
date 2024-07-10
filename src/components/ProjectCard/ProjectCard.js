@@ -55,6 +55,7 @@ export default function ProjectCard(props) {
                 borderRadius="10px"
                 p="20px"
                 effect="blur"
+                cursor="pointer"
                 onLoad={() => setloadedprojectimg(true)}
                 // border="2px solid"
                 // borderColor={textColor}
@@ -80,7 +81,22 @@ export default function ProjectCard(props) {
               textAlign="center"
               cursor="default"
             >
-              {projectName}
+              {techStack ? (
+                <Text
+                  as="button"
+                  onClick={() =>
+                    window.open("https://sandbox.paid.com/sign-in", "_blank")
+                  }
+                  sx={{
+                    textDecoration: "underline",  
+                    cursor: "pointer",
+                  }}
+                >
+                  {projectName}
+                </Text>
+              ) : (
+                projectName
+              )}
             </Text>
           </Flex>
           <Flex direction="row" align="center" justify="Center">
@@ -181,7 +197,6 @@ export default function ProjectCard(props) {
           )}
         </Flex>
       </>
-      
     </Box>
   );
 }
