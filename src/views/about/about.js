@@ -20,7 +20,7 @@ import routes from "../../routes";
 import TechStackCard from "../../components/techStackCard/techStackCard";
 import AboutMeInfo from "../../components/aboutMeInfo/aboutMeInfo";
 import trelloSvg from "../../assets/icons/trelloSvg.svg";
-import tikTok from "../../assets/icons/tikTok.svg";
+import canva from "../../assets/icons/canva.svg";
 import adobe from "../../assets/icons/adobe.svg";
 import figma from "../../assets/icons/figma.svg";
 import illustrate from "../../assets/icons/illustrate.svg";
@@ -191,8 +191,8 @@ export default function About() {
           <TechStackCard imagepath={imovie} />
           <TechStackCard imagepath={figma} />
           <TechStackCard imagepath={trelloSvg} />
+          <TechStackCard imagepath={canva} />
           <TechStackCard imagepath={git} />
-          <TechStackCard imagepath={tikTok} />
           <TechStackCard imagepath={html} />
           <TechStackCard imagepath={css} />
           <TechStackCard imagepath={js} />
